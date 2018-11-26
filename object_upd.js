@@ -37,7 +37,7 @@ function updateRecords(obj, id, prop, value) {
       obj[id]["tracks"].push(...value)
     }
     else if(prop === "tracks" && obj[id].hasOwnProperty('tracks') === false) {
-      obj[id]["tracks"] = value;
+      obj[id]["tracks"] = [value];
     }
     else {
       obj[id][prop] = value;
@@ -51,6 +51,6 @@ function updateRecords(obj, id, prop, value) {
   }
 }
 // collectionCopy = updateRecords(1, "tracks" , ["Expectation", "Alter ego"]);
-collectionCopy = updateRecords(collectionCopy, 5439, "tracks" , ["Happy New Year!"]);
-collectionCopy = updateRecords(collectionCopy, 1, "artist" , "Tame Impala");
+collectionCopy = updateRecords(collectionCopy, 5439, "tracks" , "Happy New Year!");
+collectionCopy = updateRecords(collectionCopy, 5439, "tracks" , ["abba_song_2"]);
 console.log(collectionCopy);
