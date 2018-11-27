@@ -30,14 +30,22 @@ var collectionCopy = JSON.parse(JSON.stringify(collection));
 
 // Only change code below this line
 function updateRecords(obj, id, prop, value) {
+  /*
+Bugs and fiches placeholder
+After updateRecords(2548, "tracks", ""), tracks should not be set
+
+*/
   id = id.toString();
-  if (Object.keys(obj).includes(id) === true){
+  if (obj.hasOwnProperty(id) === true){
     console.log("Yes, such key exists");
-    if (prop === "tracks" && obj[id].hasOwnProperty('tracks') === true){
-      obj[id]["tracks"].push(...value)
+    if (prop === "tracks" && obj[id].hasOwnProperty('tracks') === true && value!== ""){
+      obj[id]["tracks"].push(...[value])
     }
     else if(prop === "tracks" && obj[id].hasOwnProperty('tracks') === false) {
       obj[id]["tracks"] = [value];
+    }
+    else if(prop === "tracks" && value === "") {
+      obj[id]["tracks"] = '';
     }
     else {
       obj[id][prop] = value;
@@ -51,6 +59,11 @@ function updateRecords(obj, id, prop, value) {
   }
 }
 // collectionCopy = updateRecords(1, "tracks" , ["Expectation", "Alter ego"]);
-collectionCopy = updateRecords(collectionCopy, 5439, "tracks" , "Happy New Year!");
-collectionCopy = updateRecords(collectionCopy, 5439, "tracks" , ["abba_song_2"]);
+collectionCopy = updateRecords(collectionCopy, 5439, "artist", "ABBA");
+collectionCopy = updateRecords(collectionCopy, 5439, "tracks", "Take a Chance on Me");
+collectionCopy = updateRecords(collectionCopy, 2548, "artist", "");
+collectionCopy = updateRecords(collectionCopy, 1245, "tracks", "Addicted to Love");
+collectionCopy = updateRecords(collectionCopy, 2468, "tracks", "Free");
+collectionCopy = updateRecords(collectionCopy, 2548, "tracks", "");
+collectionCopy = updateRecords(collectionCopy, 1245, "album", "Riptide");
 console.log(collectionCopy);
