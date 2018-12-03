@@ -1,0 +1,68 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  background: url(https://static.comicvine.com/uploads/original/11127/111277291/5126687-maxresdefault.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+header{
+  text-align: center;
+  color: silver;
+  font-size: 22px;
+  padding: 15px 30px;
+  border: none;
+  background: rgba(0,0,0,0.3);
+}
+
+#motivation{
+  background-color: #f44336; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+main{
+  font-size: 16px;
+}
+
+
+.sounds{
+  position: absolute;
+  display: flex;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex: 1;
+}
+
+.sound {
+  margin: 2em;
+}
+
+
+.button {
+  background: rgba(0,0,0,0.7); /* Green */
+  border: none;
+  color: white;
+  padding: 1em 1em;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: silver;
+  font-size: 2em;
+  padding: 1rem;
+  background: rgba(0,0,0,0.3);
+  text-align: center;
+}
