@@ -26,22 +26,22 @@ header{
   font-size: 1.1em;
 }
 
-main{
+.main{
   font-size: 16px;
+  float: left;
 }
 
 
 .sounds{
-  position: absolute;
   display: flex;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  flex: 1;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  align-items: stretch;
+  flex-wrap: wrap;
 }
 
 .sound {
-  margin: 2em;
+  margin: 1em;
 }
 
 

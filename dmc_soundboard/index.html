@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header>
+    <header class="header">
       <strong>Vergil</strong>, the son of <strong>Sparda</strong> will make you <span id="motivation">MOTIVATED</span>
     </header>
-    <main>
+    <div class="main">
       <div class="sounds">
         <div class="sound">
           <audio id="first" src="sounds/where_is_your_motivation.mp3"></audio>
@@ -23,7 +23,6 @@
           <audio id="third" src="sounds/this_may_be_fun.mp3"></audio>
           <button class = "button" onclick="document.getElementById('third').play()">This may be fun</button>
         </div>
-        <br style="clear:both;"/>
         <div class="sound">
           <audio id="fourth" src="sounds/too_ez.mp3"></audio>
           <button class = "button" onclick="document.getElementById('fourth').play()">2ez</button>
@@ -37,10 +36,11 @@
           <button class ="button" onclick="document.getElementById('sixth').play()">You are not worthy as my oponent!</button>
         </div>
       </div>
-    </main>
+    </div>
   <script src="app.js" charset="utf-8"></script>
   </body>
   <footer class="footer">
-    I do not claim copyright of this sounds or background image. This is just a for fun project.
+    I do not claim copyright of this sounds or background image.
+    This is just a fan project.
   </footer>
 </html>
